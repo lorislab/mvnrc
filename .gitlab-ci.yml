@@ -1,15 +1,26 @@
 stages:
   - build
 
+cache:
+  paths:
+    - /apt-cache
+    - /go/src/github.com
+    - /go/src/golang.org
+    - /go/src/google.golang.org
+    - /go/src/gopkg.in
+
+before_script:
+  - go get -u github.com/spf13/cobra/cobra
+  - go get -u github.com/inconshreveable/mousetrap
+  - cd $GOPATH/src
+  - mkdir -p gitlab.com/$CI_PROJECT_NAMESPACE
+  - cd gitlab.com/$CI_PROJECT_NAMESPACE
+  - ln -s $CI_PROJECT_DIR
+  - cd $CI_PROJECT_NAME
+
 build:
   stage: build
   image: golang:1.10.2
-  before_script:
-    - cd $GOPATH/src
-    - mkdir -p gitlab.com/$CI_PROJECT_NAMESPACE
-    - cd gitlab.com/$CI_PROJECT_NAMESPACE
-    - ln -s $CI_PROJECT_DIR
-    - cd $CI_PROJECT_NAME
   script:
     # Compile and name the binary as `mvnrc`
     - make build
