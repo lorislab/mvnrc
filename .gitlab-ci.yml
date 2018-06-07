@@ -1,10 +1,6 @@
 stages:
   - build
 
-cache:
-  paths:
-    - $GOPATH/src
-
 before_script:
   - go get -u github.com/spf13/cobra/cobra
   - go get -u github.com/inconshreveable/mousetrap
