@@ -20,13 +20,6 @@ mvnrc --type latest --url https://oss.sonatype.org/content/groups/public org.jbo
 2.0.5.SP1
 ```
 
-Example latest from the list of versions
-```bash
-mvnrc --type versions-latest --url https://oss.sonatype.org/content/groups/public org.jboss.cdi.tck:cdi-tck-impl
-
-2.0.5.SP1
-```
-
 Example all versions in the remote repository:
 ```bash
 mvnrc --type versions --url https://oss.sonatype.org/content/groups/public org.jboss.cdi.tck:cdi-tck-impl
