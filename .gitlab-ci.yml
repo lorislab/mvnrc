@@ -3,11 +3,7 @@ stages:
 
 cache:
   paths:
-    - /apt-cache
-    - /go/src/github.com
-    - /go/src/golang.org
-    - /go/src/google.golang.org
-    - /go/src/gopkg.in
+    - $GOPATH/src
 
 before_script:
   - go get -u github.com/spf13/cobra/cobra
