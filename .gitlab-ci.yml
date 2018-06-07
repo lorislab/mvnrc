@@ -25,4 +25,5 @@ build:
     # Compile and name the binary as `mvnrc`
     - make build
     # Execute the binary
-    - ./mvnrc
+    - ./mvnrc --version
+    - ./mnvrc --help
