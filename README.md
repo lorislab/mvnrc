@@ -1,7 +1,7 @@
 # mvnrc
 Maven remote repository version client
 
-Latest release %v1.0.0
+[Latest release](https://gitlab.com/lorislab/mvnrc/tags)
 
 Basic authorization
 ```bash
