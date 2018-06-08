@@ -6,7 +6,6 @@ cd ..
 rm -rf release
 mkdir release
 
-#platforms=("windows:amd64" "windows:386" "darwin:amd64" "linux:amd64" "linux:arm64")
 platforms=("linux:amd64" "linux:arm64" "darwin:amd64" "windows:amd64" "windows:386")
 
 for platform in "${platforms[@]}"
@@ -23,7 +22,6 @@ do
     fi  
     
     echo 'Build...'$output_name
-    #env GOOS=$GOOS GOARCH=$GOARCH go build -o $output_name
     env GOOS=$GOOS GOARCH=$GOARCH TAGER_SUFFIX=$suffix TARGET_PREFIX=$output_dir make build
     if [ $? -ne 0 ]; then
         echo 'An error has occurred! Aborting the script execution...'

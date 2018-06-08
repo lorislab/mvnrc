@@ -1,6 +1,8 @@
 # mvnrc
 Maven remote repository version client
 
+Latest release %v1.0.0
+
 Basic authorization
 ```bash
 mvnrc --username USER --password PASSWORD --url https://oss.sonatype.org/content/groups/public org.jboss.cdi.tck:cdi-tck-impl
